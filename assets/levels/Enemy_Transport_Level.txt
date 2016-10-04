@@ -1,0 +1,44 @@
+O,tiles/placeholdertiles0,solid
+7,tiles/Graveyard/gravetile_00,solid
+8,tiles/Graveyard/gravetile_01,solid
+9,tiles/Graveyard/gravetile_02,solid
+4,tiles/Graveyard/gravetile_03,solid
+5,tiles/Graveyard/gravetile_04,solid
+6,tiles/Graveyard/gravetile_05,solid
+1,tiles/Graveyard/gravetile_06,solid
+2,tiles/Graveyard/gravetile_07,solid
+3,tiles/Graveyard/gravetile_08,solid
+\,tiles/Graveyard/gravetile_09,background
++,tiles/Graveyard/gravetile_10,background
+/,tiles/Graveyard/gravetile_11,background
+!,tiles/RevivalPoint,checkpoint
+R,tiles/Morgue_00,background
+T,tiles/Morgue_01,background
+Y,tiles/Morgue_02,background
+F,tiles/Morgue_03,background
+G,tiles/Morgue_04,door
+H,tiles/Morgue_05,background
+ENTITY
+Unfinished.
+K is a key, you need both to get in the door
+Q is an enemy that moves from side to side
+LEVEL
+31, 9
+
+
+
+
+
+
+            Q           
+7000008888888000008888888000009
+4555555555555555555555555555556
+
+
+
+
+             00000
+ 00000       0RTY0       00000
+ 0K !0 !     0FGH0    !  0! K0
+7000005555555000005555555000009
+4555555555555555555555555555556

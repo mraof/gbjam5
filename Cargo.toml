@@ -1,0 +1,9 @@
+[package]
+name = "gbjam5"
+version = "0.1.0"
+authors = ["mraof <mraof@mraof.com>"]
+
+[dependencies]
+glium = "*"
+gif = "*"
+embed = "*"

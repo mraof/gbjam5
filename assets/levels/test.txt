@@ -1,0 +1,26 @@
+O,tiles/placeholdertiles0,solid
+7,tiles/Graveyard/gravetile_00,solid
+8,tiles/Graveyard/gravetile_01,solid
+9,tiles/Graveyard/gravetile_02,solid
+4,tiles/Graveyard/gravetile_03,solid
+5,tiles/Graveyard/gravetile_04,solid
+6,tiles/Graveyard/gravetile_05,solid
+1,tiles/Graveyard/gravetile_06,solid
+2,tiles/Graveyard/gravetile_07,solid
+3,tiles/Graveyard/gravetile_08,solid
+\,tiles/Graveyard/gravetile_09,background
++,tiles/Graveyard/gravetile_10,background
+/,tiles/Graveyard/gravetile_11,background
+ENTITY
+Currently unfinished
+LEVEL
+10,9
+
+
+  \  +
+7888888889
+4555555556
+455O555556
+45555O5556
+4555555556
+1222222223
