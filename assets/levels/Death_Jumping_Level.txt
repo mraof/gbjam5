@@ -11,9 +11,24 @@
 \,tiles/Graveyard/gravetile_09,background
 +,tiles/Graveyard/gravetile_10,background
 /,tiles/Graveyard/gravetile_11,background
+!,tiles/RevivalPoint,checkpoint
+R,tiles/Graveyard/Morgue_00,background
+T,tiles/Graveyard/Morgue_01,background
+Y,tiles/Graveyard/Morgue_02,background
+F,tiles/Graveyard/Morgue_03,background
+G,tiles/Graveyard/Morgue_04,door,Wrap_Around_Level
+H,tiles/Graveyard/Morgue_05,background
+^,tiles/Arrow_01,arrow,up
+>,tiles/Arrow_02,arrow,right
+<,tiles/Arrow_03,arrow,left
+V,tiles/Arrow_04,arrow,down
 ENTITY
+K,key
+Q,enemy,entities/CaterpillarLife,entities/CaterpillarDeath,pace,left
+S,enemy,entities/GhostLife,entities/GhostDeath,pace,right,float,noclip
 LEVEL
-34,9
+tiles/Graveyard/Background/graveyardbg
+34,10
 
 
 
@@ -23,12 +38,14 @@ LEVEL
 89 000  000  000  000  000  000 78
 56                              45
 56                              45
+56                              45
 
 
 
              000
-            0   0
-!           0 G 0                !
+            0RTY0
+!           0FGH0                !
 8880008800088000880008800088000888
+5555555555555555555555555555555555
 5555555555555555555555555555555555
 5555555555555555555555555555555555

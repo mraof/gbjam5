@@ -1,0 +1,52 @@
+0,tiles/placeholdertiles0,solid
+7,tiles/Graveyard/gravetile_00,solid
+8,tiles/Graveyard/gravetile_01,solid
+9,tiles/Graveyard/gravetile_02,solid
+4,tiles/Graveyard/gravetile_03,solid
+5,tiles/Graveyard/gravetile_04,solid
+6,tiles/Graveyard/gravetile_05,solid
+1,tiles/Graveyard/gravetile_06,solid
+2,tiles/Graveyard/gravetile_07,solid
+3,tiles/Graveyard/gravetile_08,solid
+\,tiles/Graveyard/gravetile_09,background
++,tiles/Graveyard/gravetile_10,background
+/,tiles/Graveyard/gravetile_11,background
+!,tiles/RevivalPoint,checkpoint
+R,tiles/Graveyard/Morgue_00,background
+T,tiles/Graveyard/Morgue_01,background
+Y,tiles/Graveyard/Morgue_02,background
+F,tiles/Graveyard/Morgue_03,background
+G,tiles/Graveyard/Morgue_04,door,Uncreative_Last_Minute_Final_Level
+H,tiles/Graveyard/Morgue_05,background
+^,tiles/Arrow_01,arrow,up
+>,tiles/Arrow_02,arrow,right
+<,tiles/Arrow_03,arrow,left
+V,tiles/Arrow_04,arrow,down
+ENTITY
+K,key
+S,enemy,entities/GhostLife,entities/GhostDeath,pace,right,float,noclip
+LEVEL
+tiles/Graveyard/Background/graveyardbg
+10,11
+
+ >  S  V
+
+
+
+00
+      000
+000
+ ^  !  <
+8888888888
+5555555555
+
+ >  S  V
+      RTY
+      FGH
+      000
+00
+      000
+000
+ ^  !  <
+8888888888
+5555555555

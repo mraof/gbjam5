@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["mraof <mraof@mraof.com>"]
 
 [dependencies]
-glium = "*"
+glium = {git = "https://github.com/tomaka/glium"}
 gif = "*"
 embed = "*"
+rodio = "*"
+[replace]
+"glutin:0.6.1" = {git = "https://github.com/tomaka/glutin"}

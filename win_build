@@ -1,0 +1,8 @@
+set RUSTFLAGS=-mwindows
+touch src/main.rs
+rustup default nightly-i686-gnu
+cargo build --release
+cp target/release/gbjam5.exe release/gbjam_gnu_32.exe
+rustup default nightly-x86_64-gnu
+cargo build --release
+cp target/release/gbjam5.exe release/gbjam_gnu_64.exe
