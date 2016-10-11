@@ -3,7 +3,7 @@
 #[macro_use]
 extern crate glium;
 extern crate gif;
-extern crate rodio;
+//extern crate rodio;
 const LIFE_PALETTE: [[u8; 3]; 4] = [[0x23, 0x07, 0x03], [0x6d, 0x57, 0x1e], [0x9a, 0xc1, 0x6e], [0xd7, 0xf4, 0xd9]];
 const DEATH_PALETTE: [[u8; 3]; 4] = [[0x03, 0x1b, 0x1e], [0x1f, 0x2a, 0x54], [0x90, 0x70, 0xa3], [0xea, 0xd7, 0xe4]];
 fn main() {
@@ -327,8 +327,8 @@ impl<R> Iterator for MixSource<R> where R: Read + Seek {
     }
 }*/
 
-use std::io::Cursor;
-use rodio::Source;
+/*use std::io::Cursor;
+use rodio::Source;*/
 
 impl Game {
     pub fn load<F>(facade: &F) -> Game
@@ -495,8 +495,8 @@ impl Game {
             backgrounds
         };
         let mut values = lines.next().unwrap().split(',');
-        let width = values.next().unwrap().parse().unwrap();
-        let height = values.next().unwrap().parse().unwrap();
+        let width = values.next().unwrap().trim().parse().unwrap();
+        let height = values.next().unwrap().trim().parse().unwrap();
         let mut wraparound = false;
         while let Some(value) = values.next() {
             match value.to_lowercase().as_ref() {
@@ -761,7 +761,7 @@ impl Game {
                     //60, 1 > 1.0
                     //0, 1 > 1.0
                     //60, 1 > 0.0
-                    let mix = if (level.switch > 17) ^ (level.version == 0) {(60 - level.switch) as f32 / 60.0} else { level.switch as f32 / 60.0 };
+                    //let mix = if (level.switch > 17) ^ (level.version == 0) {(60 - level.switch) as f32 / 60.0} else { level.switch as f32 / 60.0 };
                     //self.music.send(mix).unwrap();
                     if level.switch == 0 {
                         level.paused = false;
@@ -1070,11 +1070,26 @@ impl Game {
                                             Direction::Right => { entity.x_speed = 2.0 },
                                         }
                                     }
+                                    if enemy.gravity {
+                                        if !Level::get_tile(&level.tile_map[1],
+                                                            entity.x + entity.x_speed as i32 + 8,
+                                                            entity.y - 8,
+                                                            level.wraparound)
+                                            .is_solid() {
+                                            if entity.x_speed < -0.5 {
+                                                *direction = Direction::Right;
+                                            } else if entity.x_speed > 0.5 {
+                                                *direction = Direction::Left;
+                                            }
+                                        }
+                                    }
                                     if let TileType::Arrow(ref arrow_dir) =  Level::get_tile(&level.tile_map[level.version],
                                                           entity.x + 8,
                                                           entity.y + 8,
                                                           level.wraparound).tile_type {
-                                        *direction = arrow_dir.clone();
+                                        if !enemy.gravity || (*arrow_dir == Direction::Left || *arrow_dir == Direction::Right) {
+                                            *direction = arrow_dir.clone();
+                                        }
                                     }
                                 }
                                 Some(enemy.sprites[level.version].texture())
@@ -1093,12 +1108,8 @@ impl Game {
                                     }
                                 }
                                 if key.collected {
-                                    if x_distance > key.distance || x_distance < key.distance {
                                         entity.x += x_distance / key.distance;
-                                    }
-                                    if y_distance > key.distance || y_distance < key.distance {
-                                        entity.y += y_distance / key.distance;
-                                    }
+                                        entity.y += y_distance / (key.distance / 2);
                                 }
                                 Some(key.sprite.texture())
                             }

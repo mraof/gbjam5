@@ -16,8 +16,8 @@ R,tiles/Graveyard/Morgue_00,background
 T,tiles/Graveyard/Morgue_01,background
 Y,tiles/Graveyard/Morgue_02,background
 F,tiles/Graveyard/Morgue_03,background
-G,tiles/Graveyard/Morgue_04,door,Tutorial_Level
-H,tiles/Graveyard/Morgue_05,background
+G,tiles/Graveyard/Morgue_04,door,Tutorial_Level,tiles/Graveyard/Morgue_04_Closed
+H,tiles/Graveyard/Morgue_05,keybackground,tiles/Graveyard/Morgue_05_Closed
 ^,tiles/Arrow_01,arrow,up
 >,tiles/Arrow_02,arrow,right
 <,tiles/Arrow_03,arrow,left
@@ -28,7 +28,7 @@ Q,enemy,entities/CaterpillarLife,entities/CaterpillarDeath,pace,left
 S,enemy,entities/GhostLife,entities/GhostDeath,pace,right,float,noclip
 LEVEL
 tiles/Graveyard/Background/graveyardbg
-32, 9
+27,9
 
 
 
